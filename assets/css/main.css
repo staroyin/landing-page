@@ -2270,6 +2270,33 @@ input, select, textarea {
 		border-bottom: none;
 		position: relative;
 	}
+/* Make icons appear in a horizontal line instead of stacked */
+.icons {
+    display: flex;
+    flex-direction: row; /* Aligns icons in a row */
+    justify-content: center; /* Centers them horizontally */
+    gap: 20px; /* Adds spacing between icons */
+}
+
+/* If the icons are inside a <ul> list, modify it */
+.icon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.icon-list li {
+    margin-right: 15px; /* Adds spacing between icons */
+}
+
+/* Ensure the icons don't break the layout */
+.icon {
+    display: inline-block; /* Keeps them aligned properly */
+    text-align: center;
+}
+
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2301,19 +2328,19 @@ input, select, textarea {
 		}
 
 		.icon.style1:before {
-			color: #c3e895;
+			color: #f2aecf;
 		}
 
 		.icon.style2:before {
-			color: #8addaa;
+			color: #f7b2f3;
 		}
 
 		.icon.style3:before {
-			color: #6bd4c8;
+			color: #dcacfc;
 		}
 
 		.icon.style4:before {
-			color: #57aed3;
+			color: #a6ccff;
 		}
 
 		.icon.style5:before {
